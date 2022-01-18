@@ -21,7 +21,7 @@ void passMessage(int dstX, int dstY, int srcX,int srcY,int* data, int dataSize){
    char* filename= new char[64];
    sprintf(filename,"../gpgpu-sim/trace/bench.%d.%d",src_x,src_y);
    std::fstream toController(filename,std::ios::app);
-   long long unsigned int timeNow = gpu_sim_cycle+gpu_tot_sim_cycle;
+   long long unsigned int timeNow = 0;
 
    if(!toController.is_open())
    {
